@@ -4,9 +4,9 @@
 import os
 import random
 
-
-dir = "/home/ryott/Projects/gutter-shows-website/gallery"
-f = open("pix.html", "w")
+cwd = os.getcwd()
+dir = as.path.join(cwd, "gallery")
+f = open(os.path.join(cwd, "pix.html"), "w")
 pyx = [k for k in os.listdir(dir) if os.path.isfile(os.path.join(dir, k))]
 newGallery = random.sample(pyx, 20)            
 for file in newGallery:
